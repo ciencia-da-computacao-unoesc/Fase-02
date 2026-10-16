@@ -26,9 +26,6 @@ Para manter a organização das atividades de cada estudante e disciplina, suger
 ```text
 ├── 📂 Arquitetura-Computadores/      # Exercícios de Assembly, circuitos e arquitetura
 ├── 📂 Estrutura-Dados/               # Algoritmos em C/C++, Listas, Pilhas e Árvores
-├── 📂 Logica-Matematica-Discreta/    # Provas lógicas, tabelas-verdade e grafos
-├── 📂 Matematica-Tecnologia-II/      # Resoluções matemáticas e scripts de cálculo
-├── 📂 Etica-Cultura/                 # Ensaios, resumos e debates textuais
 ├── 📂 PPIC-II/                       # Documentação e códigos do projeto comunitário
 └── 📄 README.md                      # Este arquivo guia
 ```
@@ -50,7 +47,7 @@ Para manter a organização das atividades de cada estudante e disciplina, suger
 
 ## 🔗 Links e Recursos Úteis
 
-* [Acessar Aulas Virtuais (Portal de Ensino)](https://unoesc.edu.br)
+* [Acessar Aulas Virtuais (Portal de Ensino)](https://acad.unoesc.edu.br/academico/login.jsp)
 * [Biblioteca Virtual Unoesc](https://unoesc.edu.brbiblioteca/) - *Consulte os livros de C (Deitel) e Estruturas de Dados (Tenenbaum).*
 
 ---
