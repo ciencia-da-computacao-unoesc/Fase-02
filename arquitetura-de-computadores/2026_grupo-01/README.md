@@ -5,28 +5,31 @@ Projeto de desenvolvimento de um robô móvel autônomo e controlável via Bluet
 ---
 
 ## 👥 Integrantes do Grupo
-
-
+HANS WAGNER BETINARDI <br>
+LUCIMAR BOTH <br>
+MIRIAN RODRIGUES <br>
+NATAN OGLIARI <br>
+NELSO GABRIEL ALBA <br>
 ---
 
 ## 🚀 Funcionalidades
 
 - **Modo Autônomo com Radar 180°:**
   - Varredura de ambiente com o sensor ultrassônico HC-SR04 montado sobre o servo SG90.
-  - Análise em tempo real de rotas à esquerda e à direita para escolha da rota com menor índice de obstrução.
+  - Análise de rotas à esquerda e à direita para escolha da rota.
   - Manobra automática de recuo e giro de 180° em situações de beco sem saída.
 - **Camada de Proteção Infravermelha (IR):**
   - Detecção imediata de obstáculos em proximidade crítica (< 10 cm) na dianteira do chassi.
 - **Modo Manual via Bluetooth (HC-05):**
   - Controle remoto total através do aplicativo *Arduino Bluetooth Control* (Frente, Ré, Esquerda, Direita e Parar).
 - **Interface Visual:**
-  - Exibição de telemetria em tempo real (modo ativo, leituras de distância em centímetros e alertas de manobra) em display LCD 16x2 I2C (ou Nokia 5110).
+  - Exibição de telemetria em tempo real (modo ativo, leituras de distância em centímetros, nível de bateria) em display LCD 16x2 I2C.
 
 ---
 
 ## 🛠️ Componentes e Hardware Utilizado
 
-- **Placa Controladora:** Arduino Uno R3 ou Arduino Nano (ATmega328P)
+- **Placa Controladora:** Arduino Uno R3(ATmega328P)
 - **Atuadores de Tração:** 2x Motores DC com Caixa de Redução (3-6V, eixo duplo) + Rodas emborrachadas
 - **Driver de Potência:** Módulo Ponte H Dupla L298N
 - **Sistema de Varredura:**
@@ -34,8 +37,8 @@ Projeto de desenvolvimento de um robô móvel autônomo e controlável via Bluet
   - Micro Servo Motor 9g (SG90)
 - **Sensor de Proximidade:** 1x Sensor de Obstáculo Infravermelho Reflexivo (IR)
 - **Comunicação Sem Fio:** Módulo Bluetooth HC-05
-- **Display:** Display LCD 16x2 com Módulo I2C soldado (ou Nokia 5110)
-- **Alimentação:** Suporte com 2 baterias Li-Ion 18650 (7.4V) ou equivalente para potência dos motores
+- **Display:** Display LCD 16x2 com Módulo I2C
+- **Alimentação:** Suporte com 2 baterias.
 
 ---
 
@@ -52,13 +55,11 @@ Projeto de desenvolvimento de um robô móvel autônomo e controlável via Bluet
 | **Módulo HC-05** | `TXD` / `RXD` | **D3** / **D13** | Comunicação Serial via `SoftwareSerial` |
 | **Display I2C** | `SDA` / `SCL` | **A4** / **A5** | Barramento de dados I2C |
 
-> ⚠️ **Importante:** Todos os terras (`GND`) da fonte de alimentação dos motores, da Ponte H e do Arduino devem estar interligados em uma referência comum.
-
 ---
 
 ## 📱 Mapeamento de Comandos (App Bluetooth)
 
-O aplicativo **Arduino Bluetooth Control** deve ser configurado com a seguinte tabela de envio de caracteres:
+O aplicativo [**Arduino Bluetooth Control**](https://play.google.com/store/apps/details?id=com.broxcode.arduinobluetoothfree&hl=pt) deve ser configurado com a seguinte tabela de envio de caracteres:
 
 | Botão / Função | Caractere Enviado | Descrição da Ação |
 | :---: | :---: | :--- |
@@ -69,11 +70,3 @@ O aplicativo **Arduino Bluetooth Control** deve ser configurado com a seguinte t
 | **Parar** | `S` | Para imediatamente ambos os motores |
 | **Modo Autônomo** | `A` ou `X` | Habilita a tomada de decisão autônoma |
 | **Modo Manual** | `M` ou `x` | Desativa o modo autônomo e aguarda comandos manuais |
-
----
-
-## 💻 Instalação e Execução
-
-1. Clone este repositório:
-   ```bash
-   git clone [https://github.com/](https://github.com/)[seu-usuario]/[seu-repositorio].git
