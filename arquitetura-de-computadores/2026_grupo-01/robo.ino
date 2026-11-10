@@ -34,9 +34,9 @@ const int PINO_BT_TX = 13;
 // =========================================================================
 // 2. CONSTANTES DE CALIBRAÇÃO E AJUSTE FINO
 // =========================================================================
-const int VELOCIDADE_RETA  = 170; // 0 a 255 (Ajuste conforme a tensão da sua bateria)
-const int VELOCIDADE_CURVA = 200; // Mais força para vencer o atrito no giro
-const int DISTANCIA_MINIMA = 25;  // Distância em cm para acionar o desvio
+const int VELOCIDADE_RETA  = 170; //170  0 a 255 (Ajuste conforme a tensão da sua bateria)
+const int VELOCIDADE_CURVA = 200; //200 Mais força para vencer o atrito no giro
+const int DISTANCIA_MINIMA = 60;  //25 Distância em cm para acionar o desvio
 
 // Ângulos do Servo Motor (Ajuste se o seu servo ficar levemente desalinhado)
 const int ANGULO_CENTRO   = 90;
@@ -294,7 +294,8 @@ void atualizarDisplayPeriodico(String linha1, String linha2) {
 // =========================================================================
 // 9. FUNÇÕES DE CONTROLE DOS MOTORES (PONTE H L298N)
 // =========================================================================
-void moverFrente(int velocidade) {
+void moverTras(int velocidade) { //moverFrente
+  
   analogWrite(PINO_ENA, velocidade);
   analogWrite(PINO_ENB, velocidade);
   digitalWrite(PINO_IN1, HIGH);
@@ -303,7 +304,7 @@ void moverFrente(int velocidade) {
   digitalWrite(PINO_IN4, LOW);
 }
 
-void moverTras(int velocidade) {
+void moverFrente(int velocidade) {  //moverTras
   analogWrite(PINO_ENA, velocidade);
   analogWrite(PINO_ENB, velocidade);
   digitalWrite(PINO_IN1, LOW);
@@ -312,7 +313,7 @@ void moverTras(int velocidade) {
   digitalWrite(PINO_IN4, HIGH);
 }
 
-void girarEsquerda(int velocidade) {
+void girarDireita(int velocidade) { //girarEsquerda
   analogWrite(PINO_ENA, velocidade);
   analogWrite(PINO_ENB, velocidade);
   // Motor Esquerdo recua, Motor Direito avança
@@ -322,7 +323,7 @@ void girarEsquerda(int velocidade) {
   digitalWrite(PINO_IN4, LOW);
 }
 
-void girarDireita(int velocidade) {
+void girarEsquerda(int velocidade) {//girarDireita
   analogWrite(PINO_ENA, velocidade);
   analogWrite(PINO_ENB, velocidade);
   // Motor Esquerdo avança, Motor Direito recua
