@@ -34,9 +34,9 @@ const int PINO_BT_TX = 13;
 // =========================================================================
 // 2. CONSTANTES DE CALIBRAÇÃO E AJUSTE FINO
 // =========================================================================
-const int VELOCIDADE_RETA  = 170; //170  0 a 255 (Ajuste conforme a tensão da sua bateria)
+const int VELOCIDADE_RETA  = 200; //170  0 a 255 (Ajuste conforme a tensão da sua bateria)
 const int VELOCIDADE_CURVA = 200; //200 Mais força para vencer o atrito no giro
-const int DISTANCIA_MINIMA = 60;  //25 Distância em cm para acionar o desvio
+const int DISTANCIA_MINIMA = 30;  //25 Distância em cm para acionar o desvio
 
 // Ângulos do Servo Motor (Ajuste se o seu servo ficar levemente desalinhado)
 const int ANGULO_CENTRO   = 90;
